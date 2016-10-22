@@ -1,3 +1,3 @@
 class ArticleSerializer < ActiveModel::Serializer
-  attributes :title, :content, :published, :bootcamp, :author_id, :word_count
+  attributes :title, :content, :published, :bootcamp, :avatar, :author_id, :word_count, :author
 end

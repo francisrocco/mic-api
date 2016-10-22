@@ -6,7 +6,6 @@ module Api
         render json: Article.all.order('created_at DESC')
       end
 
-
       def create
         article = Article.new(article_params)
         if article.save
@@ -23,7 +22,7 @@ module Api
       private
 
       def article_params
-        params.require(:article).permit(:title, :content, :bootcamp, :author_id)
+        params.require(:article).permit(:title, :author, :content, :bootcamp, :author_id, :avatar)
       end
 
     end
