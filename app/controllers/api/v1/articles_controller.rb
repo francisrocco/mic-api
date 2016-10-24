@@ -7,11 +7,12 @@ module Api
       end
 
       def create
+        binding.pry
         article = Article.new(article_params)
         if article.save
           render json: article
         else
-          render json: book.errors, status: 500
+          render json: article.errors, status: 500
         end
       end
 

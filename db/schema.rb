@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161022191632) do
+ActiveRecord::Schema.define(version: 20161020185156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,15 +18,12 @@ ActiveRecord::Schema.define(version: 20161022191632) do
   create_table "articles", force: :cascade do |t|
     t.string   "title"
     t.string   "content"
-    t.boolean  "published",           default: false
-    t.boolean  "bootcamp",            default: false
+    t.string   "avatar",     default: "http://i65.tinypic.com/20fdno9.png"
+    t.boolean  "published",  default: false
+    t.boolean  "bootcamp",   default: false
     t.integer  "author_id"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
+    t.datetime "created_at",                                                null: false
+    t.datetime "updated_at",                                                null: false
     t.index ["author_id"], name: "index_articles_on_author_id", using: :btree
   end
 
