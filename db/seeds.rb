@@ -8,6 +8,7 @@ lauren = Author.create(name: "Lauren Clark")
 easha = Author.create(name: "Easha Acharya")
 shimon = Author.create(name: "Shimon Moshehai")
 medha = Author.create(name: "Medha Chandorkar")
+you = Author.create(name: "You!")
 
 art0 = Article.create(title: "Six Lessons that I've Learned about Fostering Good Discussions on PolicyMic", content: Faker::Hipster.words(349, false, false).join(" "), author_id: nate.id)
 art1 = Article.create(title: "Arrested for Refusing to Leave Partner's Bedside in Missouri Hospital: Visitation Rights Still a Murky Area in State Law", content: Faker::Hipster.words(542, false, false).join(" "), author_id: rachel_g.id, bootcamp: true, avatar: "http://i64.tinypic.com/6tlhyp.png")
